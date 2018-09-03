@@ -7,6 +7,13 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>ebooksfrontend Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <!-- Version information java and spring -->
+  
+  <properties>
+  <javaee.version>8.0</javaee.version>
+  <spring.version>4.3.18.RELEASE</spring.version>
+  </properties>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -14,7 +21,30 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
+    <!-- spring-webmvc dependency  -->
+	<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>${spring.version}</version>
+	</dependency>
+    
+    <!-- jstl dependency -->
+		<dependency>
+		    <groupId>jstl</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version>
+		</dependency>
+
+    <!-- jsp avoiding error -->
+		    <dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>3.0.1</version>
+		    <scope>provided</scope>
+			</dependency>
   </dependencies>
+  
   <build>
     <finalName>ebooksfrontend</finalName>
   </build>
